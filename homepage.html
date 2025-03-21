@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +17,22 @@
       color: white;
       padding: 20px;
       font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      gap: 10px;
+    }
+    .header-left button {
+      background: white;
+      color: #ff6b81;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
     }
     .intro {
       margin: 40px 20px;
@@ -69,18 +84,27 @@
 </head>
 <body>
   <header>
-    <h1>📖 Welcome to BookBuddy</h1>
-    <p>Your personalized book recommendation platform!</p>
+    <div class="header-left">
+      <button onclick="openMenu()">Menu</button>
+      <button onclick="openDashboard()">User Dashboard</button>
+    </div>
+    <div>
+      <h1>📖 Welcome to BookBuddy</h1>
+      <p>Your personalized book recommendation platform!</p>
+    </div>
   </header>
+  
   <section class="intro">
     <h2>Discover New Books Based on Your Taste</h2>
     <p>Get recommendations, track your reading, and explore the world of books.</p>
   </section>
+  
   <section class="book-facts">
     <h2>📚 Did You Know?</h2>
     <p id="fact">Loading a fun book fact...</p>
     <button onclick="newFact()">Get Another Fact</button>
   </section>
+  
   <section class="login-signup">
     <h2>Join BookBuddy</h2>
     <div class="form-container">
@@ -99,13 +123,13 @@
       </div>
     </div>
   </section>
+  
   <script>
     const facts = [
       "The world's longest novel is 'À la recherche du temps perdu' by Marcel Proust, with 1.2 million words.",
       "The first book ever written using a typewriter was 'The Adventures of Tom Sawyer'.",
       "The Harry Potter series has sold over 500 million copies worldwide!",
       "Dr. Seuss wrote 'Green Eggs and Ham' using only 50 different words."
-       
     ];
 
     function newFact() {
@@ -113,13 +137,20 @@
       document.getElementById("fact").innerText = facts[randomIndex];
     }
 
-    // Placeholder login/signup functions (for later development)
     function login() {
       alert("Login functionality coming soon!");
     }
 
     function signup() {
       alert("Signup functionality coming soon!");
+    }
+
+    function openMenu() {
+      alert("Menu functionality coming soon!");
+    }
+
+    function openDashboard() {
+      alert("User Dashboard functionality coming soon!");
     }
 
     // Load a random fact on page load
