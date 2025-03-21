@@ -25,14 +25,16 @@
       display: flex;
       gap: 10px;
     }
-    .header-left button {
+    .header-left a {
+      text-decoration: none;
       background: white;
       color: #ff6b81;
       border: none;
-      padding: 10px;
+      padding: 10px 15px;
       cursor: pointer;
       border-radius: 5px;
       font-size: 16px;
+      font-weight: bold;
     }
     .intro {
       margin: 40px 20px;
@@ -85,8 +87,8 @@
 <body>
   <header>
     <div class="header-left">
-      <button onclick="openMenu()">Menu</button>
-      <button onclick="openDashboard()">User Dashboard</button>
+      <a href="menu.html">Menu</a>
+      <a href="userdashboard.html">User Dashboard</a>
     </div>
     <div>
       <h1>📖 Welcome to BookBuddy</h1>
@@ -143,14 +145,6 @@
 
     function signup() {
       alert("Signup functionality coming soon!");
-    }
-
-    function openMenu() {
-      alert("Menu functionality coming soon!");
-    }
-
-    function openDashboard() {
-      alert("User Dashboard functionality coming soon!");
     }
 
     // Load a random fact on page load
