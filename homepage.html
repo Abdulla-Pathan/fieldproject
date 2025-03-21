@@ -17,25 +17,34 @@
       color: white;
       padding: 20px;
       font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
-    .header-left {
+    
+    /* Navigation Links */
+    .nav-links {
       display: flex;
-      gap: 10px;
+      justify-content: center;
+      gap: 25px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      margin: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .header-left a {
+
+    .nav-links a {
       text-decoration: none;
-      background: white;
-      color: #ff6b81;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
+      color:black;
+      font-size: 18px;
       font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
     }
+
+    /* Dark Hover Effect */
+    .nav-links a:hover {
+      background:#ff6b81;
+    }
+
     .intro {
       margin: 40px 20px;
       font-size: 18px;
@@ -86,27 +95,27 @@
 </head>
 <body>
   <header>
-    <div class="header-left">
-      <a href="menu.html">Menu</a>
-      <a href="userdashboard.html">User Dashboard</a>
-    </div>
-    <div>
-      <h1>📖 Welcome to BookBuddy</h1>
-      <p>Your personalized book recommendation platform!</p>
-    </div>
+    <h1>📖 Welcome to BookBuddy</h1>
+    <p>Your personalized book recommendation platform!</p>
   </header>
-  
+
+  <!-- Navigation Links Below Header -->
+  <nav class="nav-links">
+    <a href="menu.html">📜 Menu</a>
+    <a href="userdashboard.html">📊 User Dashboard</a>
+  </nav>
+
   <section class="intro">
     <h2>Discover New Books Based on Your Taste</h2>
     <p>Get recommendations, track your reading, and explore the world of books.</p>
   </section>
-  
+
   <section class="book-facts">
     <h2>📚 Did You Know?</h2>
     <p id="fact">Loading a fun book fact...</p>
     <button onclick="newFact()">Get Another Fact</button>
   </section>
-  
+
   <section class="login-signup">
     <h2>Join BookBuddy</h2>
     <div class="form-container">
@@ -125,7 +134,7 @@
       </div>
     </div>
   </section>
-  
+
   <script>
     const facts = [
       "The world's longest novel is 'À la recherche du temps perdu' by Marcel Proust, with 1.2 million words.",
@@ -147,7 +156,6 @@
       alert("Signup functionality coming soon!");
     }
 
-    // Load a random fact on page load
     window.onload = newFact;
   </script>
 </body>
